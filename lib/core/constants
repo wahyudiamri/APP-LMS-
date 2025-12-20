@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+
+class AppColors {
+  static const Color primary = Color(0xFF0C4A6E); // Deep Blue (LMS Style)
+  static const Color secondary = Color(0xFF0EA5E9);
+  static const Color accent = Color(0xFFF59E0B); // Amber untuk progress/star
+  static const Color background = Color(0xFFF8FAFC);
+  static const Color white = Colors.white;
+  static const Color grey = Color(0xFF64748B);
+}
+
+class AppTexts {
+  static const String welcomeMessage = "Halo, Mari Belajar!";
+  static const String courseHeader = "Kursus Saya";
+  static const String seeAll = "Lihat Semua";
+}

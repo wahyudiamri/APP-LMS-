@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import '../constants/app_constants.dart';
+
+class AppTheme {
+  static ThemeData get lightTheme {
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
+      scaffoldBackgroundColor: AppColors.background,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.white,
+        elevation: 0,
+        centerTitle: false,
+        titleTextStyle: TextStyle(
+          color: Colors.black, 
+          fontSize: 20, 
+          fontWeight: FontWeight.bold
+        ),
+      ),
+      textTheme: const TextTheme(
+        headlineMedium: TextStyle(
+          fontWeight: FontWeight.bold, 
+          color: AppColors.primary
+        ),
+        bodyMedium: TextStyle(color: AppColors.grey),
+      ),
+    );
+  }
+}

@@ -1,0 +1,15 @@
+class Course {
+  final int id;
+  final String title;
+  final String instructor;
+  final double progress;
+  final String thumbnail;
+
+  const Course({
+    required this.id,
+    required this.title,
+    required this.instructor,
+    required this.progress,
+    required this.thumbnail,
+  });
+}
