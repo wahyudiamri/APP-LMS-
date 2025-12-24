@@ -6,6 +6,7 @@ import 'data/datasources/auth_remote_data_source.dart';
 import 'data/repositories/auth_repository_impl.dart';
 import 'domain/usecases/login_usecase.dart';
 import 'presentation/bloc/auth_bloc.dart';
+import 'presentation/pages/splash_screen.dart';
 import 'presentation/pages/login_page.dart';
 import 'presentation/pages/home_page.dart';
 
@@ -54,11 +55,12 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        initialRoute: '/login',
+        initialRoute: '/splash',
         routes: {
-          '/login': (context) => const LoginPage(),
-          '/home': (context) => const HomePage(),
-        },
+            '/splash': (context) => const SplashScreen(),
+            '/login': (context) => const LoginPage(),
+            '/home': (context) => const HomePage(),
+          },
       ),
     );
   }
