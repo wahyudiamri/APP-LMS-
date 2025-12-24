@@ -5,6 +5,7 @@ import '../bloc/auth_event.dart';
 import '../bloc/auth_state.dart';
 import '../../data/models/login_request.dart';
 import '../widgets/login_form.dart';
+import '../widgets/help_bottom_sheet.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -14,6 +15,30 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
+        actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.help_outline),
+            tooltip: 'Help',
+            onSelected: (language) {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                builder: (context) => HelpBottomSheet(language: language),
+              );
+            },
+            itemBuilder: (BuildContext context) => [
+              const PopupMenuItem<String>(
+                value: 'id',
+                child: Text('Bantuan (ID)'),
+              ),
+              const PopupMenuItem<String>(
+                value: 'en',
+                child: Text('Help (EN)'),
+              ),
+            ],
+          ),
+        ],
       ),
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
