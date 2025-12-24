@@ -1,6 +1,0 @@
-import '../entities/course.dart';
-
-abstract class CourseRepository {
-  Future<List<Course>> getMyCourses();
-  Future<Course> getCourseDetail(int id);
-}
